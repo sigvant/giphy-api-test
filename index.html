@@ -5,22 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giphy Test</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <img src="#" alt="gihpy-box">
 
+    <div class="content">
+        <div class="img-box">
+            <img src="#" alt="gihpy-box">
+        </div>
+    </div>
+    <div class="controls">
+        <form action="">
+            <input type="text" class='search-input'>    
+            <button class='get-new-gif'> Get New Gif!</button>
+        </form>
+    </div>
 
-    <script>
-        const img = document.querySelector('img');
-        fetch('https://api.giphy.com/v1/gifs/translate?api_key=K2ukBACxDp2KQKgF8jHr5r9VK2um5kgh&s=cats', {mode: 'cors'})
-            .then(function(response) {
-                return response.json();
-            })
-            .then(function(response) {
-                img.src = response.data.images.original.url;
-            })
-    </script>
-
+<script src="script.js"></script>
 </body>
 </html>

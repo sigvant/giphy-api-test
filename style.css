@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right, rgb(6, 173, 212), rgb(3, 234, 168));
+    flex-direction: column;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+}
+
+.get-new-gif {
+    color: white;
+    background-color: purple;
+    padding: 1rem;
+    border: 2px solid purple;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.search-input {
+    padding: 1rem;
+    border: 2px solid purple;
+    margin: 1rem;
+}
+

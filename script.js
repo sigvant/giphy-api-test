@@ -20,6 +20,9 @@ function getNewGif(query) {
     .then(function(response) {
         img.src = response.data.images.original.url;
     })
+    .catch(function(error) {
+        console.log(error);
+    })
 }
 
 getNewGif('cats');

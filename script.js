@@ -10,19 +10,14 @@ newGifButton.addEventListener('click', (event) => {
     }
 });
 
-function getNewGif(query) {
-    console.log(searchGifInput.value)
-
-    fetch(`https://api.giphy.com/v1/gifs/translate?api_key=K2ukBACxDp2KQKgF8jHr5r9VK2um5kgh&s=${query}`, {mode: 'cors'})
-    .then(function(response) {
-        return response.json();
-    })
-    .then(function(response) {
-        img.src = response.data.images.original.url;
-    })
-    .catch(function(error) {
+async function getNewGif(query) {
+    try {
+        const response = await fetch(`https://api.giphy.com/v1/gifs/translate?api_key=K2ukBACxDp2KQKgF8jHr5r9VK2um5kgh&s=${query}`, {mode: 'cors'})
+        const data = await response.json();
+        img.src = data.data.images.original.url;
+    } catch (error) {
         console.log(error);
-    })
+    }
 }
 
 getNewGif('cats');
